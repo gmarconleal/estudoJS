@@ -6,13 +6,27 @@
     <title>Watch</title>
 </head>
 <body>
+    
         <h1>Watch</h1>
-        <span>00</span>
+        <span id="hora">00</span>
         <span>:</span>
-        <span>00</span>
+        <span id="min">00</span>
         <span>:</span>
-        <span>00</span>
-     
+        <span id="seg">00</span>
+        
 
 </body>
 </html>
+
+<script>
+    setInterval(() => {
+        const d = new Date();
+        document.getElementById("hora").innerHTML = d.getHours();
+        document.getElementById("min").innerHTML = d.getMinutes();
+        document.getElementById("seg").innerHTML = d.getSeconds();
+    }, 1000);
+       
+             
+
+
+</script>
