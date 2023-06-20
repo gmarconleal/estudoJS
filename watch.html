@@ -3,21 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <title>Watch</title>
 </head>
 <body>
-    
-        <h1>Watch</h1>
-        <span id="hora">00</span>
+    <div class="cont">
+        
+                <h1>Watch</h1>
+                <div class="watch">
+                <span id="hora">00</span>
         <span>:</span>
         <span id="min">00</span>
         <span>:</span>
         <span id="seg">00</span>
-        
+    </div>
+    </div>
 
 </body>
 </html>
-
+<style>
+    .cont{
+        height: 40%;
+        width: 60%;
+        background-color: darkkhaki;
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .watch{
+        height: 40%;
+        width: 60%;
+        background-color: darkkhaki;
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
 <script>
     setInterval(() => {
         const d = new Date();
@@ -25,8 +49,4 @@
         document.getElementById("min").innerHTML = d.getMinutes();
         document.getElementById("seg").innerHTML = d.getSeconds();
     }, 1000);
-       
-             
-
-
 </script>
